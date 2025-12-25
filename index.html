@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Paws and Pets Play Club - Professional pet sitting, dog walking, and overnight care in Washingtonville, NY. Your pets home away from home!">
+  <meta name="keywords" content="pet sitting, dog walking, Washingtonville NY, pet care, overnight pet care, cat sitting, Orange County NY">
+  <meta name="author" content="Paws and Pets Play Club">
+  
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Paws and Pets Play Club | Pet Care in Washingtonville, NY">
+  <meta property="og:description" content="Loving, reliable pet care in Washingtonville, NY. Dog walking, pet sitting, overnight care, and more!">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+  
+  <title>Paws and Pets Play Club | Pet Care in Washingtonville, NY</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --yellow-light: #fbf2a1;
+      --yellow: #ffe887;
+      --yellow-golden: #ffdf7c;
+      --yellow-orange: #ffcd6f;
+      --orange: #ffbd58;
+      --orange-dark: #f5a623;
+      --orange-deeper: #e8940f;
+      --cream: #fffef5;
+      --cream-dark: #fff9e6;
+      --brown: #5c4a32;
+      --brown-light: #7a6548;
+      --brown-dark: #4a3a28;
+      --text: #3d3528;
+      --text-light: #6b5f4d;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 254, 245, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 12px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 189, 88, 0.3);
+    }
+
+    .logo {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brown);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .logo-paw {
+      font-size: 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange-dark);
+    }
+
+    .nav-cta {
+      background: var(--orange);
+      color: var(--brown-dark);
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 189, 88, 0.5);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--brown);
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: var(--cream);
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    .mobile-nav.active {
+      display: block;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 12px 0;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid var(--yellow-light);
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+      background: var(--orange);
+      color: var(--brown-dark);
+      text-align: center;
+      border-radius: 50px;
+      margin-top: 12px;
+      padding: 14px;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 120px 60px 80px;
+      gap: 60px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, var(--cream) 0%, var(--yellow-light) 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 150%;
+      background: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-orange) 100%);
+      border-radius: 0 0 0 50%;
+      z-index: 0;
+      opacity: 0.25;
+    }
+
+    .hero::after {
+      content: "🐾";
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      font-size: 120px;
+      opacity: 0.08;
+      transform: rotate(-15deg);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--brown);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+      box-shadow: 0 4px 15px rgba(255, 232, 135, 0.4);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: var(--brown);
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .hero h1 span {
+      color: var(--orange-dark);
+    }
+
+    .hero-tagline {
+      font-size: 22px;
+      color: var(--orange-dark);
+      font-weight: 600;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: var(--text-light);
+      margin-bottom: 32px;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--brown-dark);
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 189, 88, 0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--brown);
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      border: 2px solid var(--yellow-orange);
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--yellow-orange);
+      color: var(--brown-dark);
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-photo-main {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: linear-gradient(145deg, var(--yellow) 0%, var(--orange) 100%);
+      border-radius: 30px 30px 120px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--brown);
+      font-size: 100px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(255, 189, 88, 0.35);
+      overflow: hidden;
+    }
+
+    .hero-photo-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-placeholder-text {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 16px;
+      background: rgba(255,255,255,0.5);
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 80%;
+      color: var(--brown);
+    }
+
+    .floating-badge {
+      position: absolute;
+      background: white;
+      padding: 14px 18px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .floating-badge.location {
+      bottom: 15%;
+      left: -30px;
+      animation-delay: 0.5s;
+    }
+
+    .floating-badge.pets {
+      top: 15%;
+      right: -20px;
+      animation-delay: 1s;
+    }
+
+    .badge-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--yellow);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .badge-icon.orange {
+      background: var(--yellow-orange);
+    }
+
+    .badge-text strong {
+      display: block;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .badge-text span {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 100px 60px;
+      background: white;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: var(--yellow-light);
+      color: var(--brown);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      color: var(--text-light);
+      max-width: 550px;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--cream);
+      border-radius: 24px;
+      padding: 32px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(255, 189, 88, 0.2);
+      border-color: var(--yellow);
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--yellow) 0%, var(--orange) 100%);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--yellow);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--text-light);
+      font-size: 14px;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .service-price {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--orange-dark);
+    }
+
+    .service-price span {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .service-includes {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--yellow-orange);
+    }
+
+    .service-includes h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .includes-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .includes-list span {
+      background: var(--yellow-light);
+      color: var(--brown);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Pricing Note */
+    .pricing-note {
+      max-width: 800px;
+      margin: 50px auto 0;
+      background: linear-gradient(135deg, var(--yellow-light) 0%, var(--yellow) 100%);
+      border-radius: 16px;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .pricing-note-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .pricing-note p {
+      color: var(--brown);
+      font-size: 14px;
+    }
+
+    .pricing-note strong {
+      color: var(--brown-dark);
+    }
+
+    /* About Section */
+    .about {
+      padding: 100px 60px;
+      background: linear-gradient(180deg, var(--cream) 0%, var(--yellow-light) 50%, var(--cream) 100%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .about-photo {
+      aspect-ratio: 1;
+      background: linear-gradient(145deg, var(--yellow) 0%, var(--orange) 100%);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--brown);
+      font-size: 40px;
+      overflow: hidden;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-photo:first-child {
+      grid-row: span 2;
+      aspect-ratio: auto;
+      font-size: 60px;
+    }
+
+    .about-photo .photo-placeholder-text {
+      font-size: 11px;
+      padding: 6px 12px;
+    }
+
+    .about-content h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .about-content h2 span {
+      color: var(--orange-dark);
+    }
+
+    .about-subtitle {
+      font-size: 16px;
+      color: var(--orange-dark);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text-light);
+      margin-bottom: 16px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .highlight-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--yellow);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .highlight-item span {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .about-pets {
+      margin-top: 28px;
+      padding: 20px;
+      background: var(--yellow-light);
+      border-radius: 16px;
+      border-left: 4px solid var(--orange);
+    }
+
+    .about-pets h4 {
+      font-size: 14px;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .about-pets p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      padding: 100px 60px;
+      background: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1;
+      background: linear-gradient(145deg, var(--yellow) 0%, var(--orange) 100%);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--brown);
+      font-size: 36px;
+      transition: transform 0.3s;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 2;
+      font-size: 60px;
+    }
+
+    .gallery-item .photo-placeholder-text {
+      font-size: 10px;
+      padding: 4px 10px;
+    }
+
+    /* Service Area Section */
+    .service-area {
+      padding: 80px 60px;
+      background: linear-gradient(135deg, var(--yellow-orange) 0%, var(--orange) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-area::before {
+      content: "📍";
+      position: absolute;
+      font-size: 200px;
+      opacity: 0.15;
+      top: -30px;
+      right: -30px;
+    }
+
+    .service-area-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-area h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--brown-dark);
+      margin-bottom: 24px;
+    }
+
+    .area-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .area-card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .area-card-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .area-card h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .area-card p {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* Policies Section */
+    .policies {
+      padding: 80px 60px;
+      background: var(--cream);
+    }
+
+    .policies-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .policy-card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      gap: 16px;
+      border: 2px solid var(--yellow-light);
+      transition: all 0.3s;
+    }
+
+    .policy-card:hover {
+      border-color: var(--yellow);
+      box-shadow: 0 10px 30px rgba(255, 232, 135, 0.3);
+    }
+
+    .policy-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--yellow-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .policy-content h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 6px;
+    }
+
+    .policy-content p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* Contact/Booking Section */
+    .booking {
+      padding: 100px 60px;
+      background: white;
+    }
+
+    .booking-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, var(--yellow-light) 0%, var(--yellow) 100%);
+      border-radius: 32px;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      box-shadow: 0 20px 60px rgba(255, 189, 88, 0.2);
+    }
+
+    .booking-info h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .booking-info > p {
+      color: var(--text-light);
+      margin-bottom: 32px;
+      font-size: 15px;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .contact-item:hover {
+      transform: translateX(5px);
+    }
+
+    .contact-icon {
+      width: 52px;
+      height: 52px;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .contact-icon.preferred {
+      background: var(--orange);
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-details span {
+      font-weight: 700;
+      color: var(--brown);
+      font-size: 16px;
+    }
+
+    .contact-item:hover .contact-details span {
+      color: var(--orange-dark);
+    }
+
+    .contact-details small {
+      color: var(--text-light);
+      font-size: 12px;
+    }
+
+    .preferred-badge {
+      background: var(--orange);
+      color: var(--brown-dark);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 10px;
+      margin-left: 8px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 12px 20px;
+      background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .social-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(193, 53, 132, 0.4);
+    }
+
+    .booking-form {
+      background: white;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .booking-form h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--yellow-light);
+      border-radius: 12px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      transition: border-color 0.3s;
+      background: white;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--orange);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .payment-methods {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--yellow);
+    }
+
+    .payment-methods h4 {
+      font-size: 14px;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .payment-icons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .payment-icon {
+      background: var(--yellow-light);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--brown);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--brown);
+      color: white;
+      padding: 60px;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      max-width: 280px;
+      line-height: 1.6;
+    }
+
+    .footer-links h4 {
+      font-size: 15px;
+      margin-bottom: 18px;
+      color: var(--yellow);
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-contact p {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-contact a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-contact a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+    }
+
+    /* Form Success Message */
+    .form-success {
+      display: none;
+      background: var(--yellow-light);
+      border: 2px solid var(--orange);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    .form-success p {
+      color: var(--brown);
+      font-weight: 600;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 120px 40px 60px;
+      }
+
+      .hero-content {
+        order: 1;
+      }
+
+      .hero-image {
+        order: 0;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .hero p {
+        margin: 0 auto 32px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .floating-badge {
+        display: none;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-photos {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .area-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .policies-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-container {
+        grid-template-columns: 1fr;
+        padding: 40px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 12px 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero {
+        padding: 100px 20px 40px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-tagline {
+        font-size: 18px;
+      }
+
+      .services, .about, .gallery, .booking, .policies {
+        padding: 60px 20px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header h2 {
+        font-size: 30px;
+      }
+
+      .about-content h2 {
+        font-size: 28px;
+      }
+
+      .about-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .service-area {
+        padding: 60px 20px;
+      }
+
+      .booking-container {
+        padding: 24px;
+      }
+
+      .booking-form {
+        padding: 24px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-brand p {
+        margin: 0 auto;
+      }
+
+      .footer-contact p {
+        justify-content: center;
+      }
+
+      .pricing-note {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="logo">
+      <span class="logo-paw">🐾</span>
+      Paws & Pets Play Club
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Alix</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#areas">Service Area</a></li>
+    </ul>
+    <a href="#booking" class="nav-cta">📞 Book Now</a>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services">Services</a>
+    <a href="#about">About Alix</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#areas">Service Area</a>
+    <a href="#booking">📞 Book Now</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">✨ Washingtonville, NY Pet Care</div>
+      <h1>Loving Care for Your <span>Furry Family</span></h1>
+      <p class="hero-tagline">"Your pets home away from home"</p>
+      <p>Hi! I'm Alixandra, a dedicated pet lover providing trustworthy dog walking, pet sitting, and overnight care. Your pets will receive the same love and attention I give my own fur babies, JJ and Bél!</p>
+      <div class="hero-buttons">
+        <a href="tel:8457518556" class="btn-primary">
+          📞 Call/Text to Book
+        </a>
+        <a href="#services" class="btn-secondary">View Services & Pricing</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-photo-main">
+        <!-- Replace with: <img src="images/hero.jpg" alt="Alixandra with a happy dog"> -->
+        👩🏽‍🦱🐕
+        <span class="photo-placeholder-text">📸 Add your main photo here!<br>Suggestion: You smiling with a dog</span>
+      </div>
+      <div class="floating-badge location">
+        <div class="badge-icon">📍</div>
+        <div class="badge-text">
+          <strong>Washingtonville</strong>
+          <span>& surrounding areas</span>
+        </div>
+      </div>
+      <div class="floating-badge pets">
+        <div class="badge-icon orange">🐾</div>
+        <div class="badge-text">
+          <strong>Dogs, Cats & More</strong>
+          <span>All pets welcome!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <span class="section-tag">Services & Pricing</span>
+      <h2>How Can I Help Your Pet?</h2>
+      <p>Choose the perfect care option for your furry friend. Every service includes photo updates so you never have to worry!</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🚶‍♀️</div>
+        <h3>Dog Walking</h3>
+        <p>Energizing walks within Washingtonville with potty breaks, playtime, and lots of love.</p>
+        <div class="service-price">$15 <span>/ 15 min</span> &nbsp;•&nbsp; $25 <span>/ 30 min</span></div>
+        <div class="service-includes">
+          <h4>Includes:</h4>
+          <div class="includes-list">
+            <span>Fresh water</span>
+            <span>Treats</span>
+            <span>Potty break</span>
+            <span>Playtime</span>
+            <span>Photo updates</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Pet Day Care</h3>
+        <p>Full day of care, play, and attention while you're at work or running errands.</p>
+        <div class="service-price">$30 <span>/ dog</span> &nbsp;•&nbsp; $20 <span>/ cat</span></div>
+        <div class="service-includes">
+          <h4>Includes:</h4>
+          <div class="includes-list">
+            <span>Walks</span>
+            <span>Meals</span>
+            <span>Playtime</span>
+            <span>Fresh water</span>
+            <span>Treats</span>
+            <span>Photo updates</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌙</div>
+        <h3>Overnight Care</h3>
+        <p>Your pet stays comfortable while you're away - available anywhere, any distance!</p>
+        <div class="service-price">$45 <span>/ night (dog)</span> &nbsp;•&nbsp; $35 <span>/ night (cat)</span></div>
+        <div class="service-includes">
+          <h4>Includes:</h4>
+          <div class="includes-list">
+            <span>Walks</span>
+            <span>All meals</span>
+            <span>Potty breaks</span>
+            <span>Playtime</span>
+            <span>Cuddles</span>
+            <span>Photo updates</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🐱</div>
+        <h3>Cat Care</h3>
+        <p>Feeding, litter box duty, playtime, and plenty of love for your feline friends.</p>
+        <div class="service-price">$20 <span>/ day care</span> &nbsp;•&nbsp; $35 <span>/ overnight</span></div>
+        <div class="service-includes">
+          <h4>Includes:</h4>
+          <div class="includes-list">
+            <span>Feeding</span>
+            <span>Fresh water</span>
+            <span>Litter box</span>
+            <span>Playtime</span>
+            <span>Photo updates</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🐹</div>
+        <h3>Small Animals</h3>
+        <p>Hamsters, guinea pigs, rabbits, and other small friends get great care too!</p>
+        <div class="service-price">Contact for pricing</div>
+        <div class="service-includes">
+          <h4>Includes:</h4>
+          <div class="includes-list">
+            <span>Feeding</span>
+            <span>Fresh water</span>
+            <span>Cage cleaning</span>
+            <span>Handling/play</span>
+            <span>Photo updates</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🐠</div>
+        <h3>Fish Care</h3>
+        <p>Feeding and tank checks for your aquatic friends while you're away.</p>
+        <div class="service-price">Contact for pricing</div>
+        <div class="service-includes">
+          <h4>Includes:</h4>
+          <div class="includes-list">
+            <span>Feeding</span>
+            <span>Tank monitoring</span>
+            <span>Water checks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-note">
+      <div class="pricing-note-icon">💡</div>
+      <div>
+        <p><strong>Multi-pet household?</strong> Additional pets in the same home are just +$10 for overnight stays or +$5 for walks. <strong>Weekly recurring clients</strong> receive a 10% discount!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-photos">
+        <div class="about-photo">
+          <!-- Replace with: <img src="images/about-1.jpg" alt="Alixandra walking dogs"> -->
+          👩🏽‍🦱🐕‍🦺
+          <span class="photo-placeholder-text">You with dogs outdoors</span>
+        </div>
+        <div class="about-photo">
+          <!-- Replace with: <img src="images/about-2.jpg" alt="Cozy cuddles with pets"> -->
+          🛋️🐶
+          <span class="photo-placeholder-text">Cozy cuddles</span>
+        </div>
+        <div class="about-photo">
+          <!-- Replace with: <img src="images/about-3.jpg" alt="Alixandra with a cat"> -->
+          🐱😊
+          <span class="photo-placeholder-text">You with a cat</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">Meet Your Pet Sitter</span>
+        <h2>Hi, I'm <span>Alix!</span></h2>
+        <p class="about-subtitle">16-year-old animal lover from Washingtonville, NY</p>
+        <p>I've been caring for pets my whole life and I treat every animal like family. Growing up surrounded by dogs and cats taught me that every pet deserves love, attention, and someone who truly cares about their wellbeing.</p>
+        <p>I have amazing parents who help me care for your animals while I'm at school, sports, or theater rehearsals - so your pet is always in good hands! When they're with me, they become part of my family.</p>
+        <p>Fun fact: I'm part of my school theater program and want to be a sports physical therapist one day!</p>
+        
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🐾</div>
+            <span>Lifelong pet lover</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">📸</div>
+            <span>Photo updates always</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">💕</div>
+            <span>Genuine care & love</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">👨‍👩‍👧</div>
+            <span>Family-supported</span>
+          </div>
+        </div>
+
+        <div class="about-pets">
+          <h4>🐕 My Own Fur Babies:</h4>
+          <p><strong>JJ</strong> - my Chihuahua, and <strong>Bél</strong> - my cat. They've taught me everything about loving and caring for animals!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="section-header">
+      <span class="section-tag">Pet Gallery</span>
+      <h2>Happy Pets I've Cared For</h2>
+      <p>A glimpse into the love and fun your pet will experience!</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <!-- Replace with: <img src="images/gallery-1.jpg" alt="Happy pets playing"> -->
+        🐕🐩🐶
+        <span class="photo-placeholder-text">Feature: You with multiple dogs</span>
+      </div>
+      <div class="gallery-item">
+        <!-- Replace with: <img src="images/gallery-2.jpg" alt="Dog walking"> -->
+        🏃‍♀️🐕
+        <span class="photo-placeholder-text">Walking</span>
+      </div>
+      <div class="gallery-item">
+        <!-- Replace with: <img src="images/gallery-3.jpg" alt="Nap time"> -->
+        😴🐶
+        <span class="photo-placeholder-text">Nap time</span>
+      </div>
+      <div class="gallery-item">
+        <!-- Replace with: <img src="images/gallery-4.jpg" alt="Cat care"> -->
+        🐱
+        <span class="photo-placeholder-text">Cat care</span>
+      </div>
+      <div class="gallery-item">
+        <!-- Replace with: <img src="images/gallery-5.jpg" alt="Outdoor fun"> -->
+        🌿🐕
+        <span class="photo-placeholder-text">Outdoor fun</span>
+      </div>
+      <div class="gallery-item">
+        <!-- Replace with: <img src="images/gallery-6.jpg" alt="Car rides"> -->
+        🚗🐶
+        <span class="photo-placeholder-text">Car rides</span>
+      </div>
+      <div class="gallery-item">
+        <!-- Replace with: <img src="images/gallery-7.jpg" alt="Cozy time"> -->
+        🛋️🐕
+        <span class="photo-placeholder-text">Cozy time</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Section -->
+  <section class="service-area" id="areas">
+    <div class="service-area-content">
+      <span class="section-tag" style="background: rgba(255,255,255,0.3); color: var(--brown-dark);">Where I Work</span>
+      <h2>Service Areas</h2>
+      <div class="area-cards">
+        <div class="area-card">
+          <div class="area-card-icon">🚶‍♀️</div>
+          <h3>Dog Walking</h3>
+          <p>Within Washingtonville, NY only</p>
+        </div>
+        <div class="area-card">
+          <div class="area-card-icon">🏠</div>
+          <h3>Pet Day Care</h3>
+          <p>Within 20 minutes of Washingtonville</p>
+        </div>
+        <div class="area-card">
+          <div class="area-card-icon">🌙</div>
+          <h3>Overnight Care</h3>
+          <p>Any distance - I'll travel to you!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Policies Section -->
+  <section class="policies">
+    <div class="section-header">
+      <span class="section-tag">Good to Know</span>
+      <h2>Policies & Requirements</h2>
+    </div>
+    <div class="policies-grid">
+      <div class="policy-card">
+        <div class="policy-icon">🤝</div>
+        <div class="policy-content">
+          <h3>Free Meet & Greet</h3>
+          <p>Required before your first booking so your pet and I can get to know each other!</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-icon">⏰</div>
+        <div class="policy-content">
+          <h3>48 Hours Notice</h3>
+          <p>Please book at least 48 hours in advance when possible. Cancellations need 48 hours notice for a full refund.</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-icon">💉</div>
+        <div class="policy-content">
+          <h3>Vaccinations Required</h3>
+          <p>All pets must be up to date on their vaccinations for everyone's safety.</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-icon">🍽️</div>
+        <div class="policy-content">
+          <h3>You Provide Supplies</h3>
+          <p>Please provide your pet's food, treats, medications, and any supplies they need.</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-icon">✂️</div>
+        <div class="policy-content">
+          <h3>Trimmed Nails</h3>
+          <p>For safety during handling and play, please ensure your pet's nails are trimmed.</p>
+        </div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-icon">😊</div>
+        <div class="policy-content">
+          <h3>Friendly Pets Only</h3>
+          <p>I don't accept aggressive animals, but all friendly pets are welcome!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/Booking Section -->
+  <section class="booking" id="booking">
+    <div class="booking-container">
+      <div class="booking-info">
+        <span class="section-tag">Let's Connect</span>
+        <h2>Ready to Book?</h2>
+        <p>Text or call me to check availability and schedule a free meet & greet! I usually respond within a few hours.</p>
+        
+        <div class="contact-methods">
+          <a href="tel:8457518556" class="contact-item">
+            <div class="contact-icon preferred">📱</div>
+            <div class="contact-details">
+              <span>(845) 751-8556 <span class="preferred-badge">PREFERRED</span></span>
+              <small>Text or call anytime!</small>
+            </div>
+          </a>
+          <a href="mailto:pawsandpetsplayclub1@gmail.com" class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <span>pawsandpetsplayclub1@gmail.com</span>
+              <small>I'll respond within 24 hours</small>
+            </div>
+          </a>
+        </div>
+
+        <a href="https://instagram.com/pawsandpetsplayclub" target="_blank" rel="noopener noreferrer" class="social-link">
+          📸 Follow @pawsandpetsplayclub
+        </a>
+
+        <div class="payment-methods">
+          <h4>💳 Accepted Payment Methods</h4>
+          <div class="payment-icons">
+            <div class="payment-icon">💵 Cash</div>
+            <div class="payment-icon">⚡ Zelle</div>
+            <div class="payment-icon">📝 Check</div>
+          </div>
+          <p style="font-size: 12px; color: var(--text-light); margin-top: 10px;">Payment: Half upfront, half after service</p>
+        </div>
+      </div>
+
+      <div class="booking-form">
+        <h3>📋 Quick Inquiry</h3>
+        <div class="form-success" id="formSuccess">
+          <p>✅ Message sent! I'll get back to you soon.</p>
+        </div>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(845) 123-4567" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@email.com">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="Dog Walking">Dog Walking</option>
+                <option value="Pet Day Care">Pet Day Care</option>
+                <option value="Overnight Care">Overnight Care</option>
+                <option value="Cat Care">Cat Care</option>
+                <option value="Small Animal Care">Small Animal Care</option>
+                <option value="Fish Care">Fish Care</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="petType">Pet Type</label>
+              <select id="petType" name="petType" required>
+                <option value="">Select pet type</option>
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Small Animal">Small Animal</option>
+                <option value="Fish">Fish</option>
+                <option value="Multiple Pets">Multiple Pets</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell me about your pet!</label>
+            <textarea id="message" name="message" rows="3" placeholder="Pet's name, age, any special needs or notes..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+            🐾 Send Inquiry
+          </button>
+        </form>
+        <p style="font-size: 11px; color: var(--text-light); text-align: center; margin-top: 12px;">Or just text me at (845) 751-8556 - it's faster! 😊</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-paw">🐾</span>
+          Paws & Pets Play Club
+        </a>
+        <p>Providing loving, reliable pet care in Washingtonville, NY and surrounding areas. Your pets deserve the best, and that's exactly what they'll get!</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Dog Walking</a></li>
+          <li><a href="#services">Pet Day Care</a></li>
+          <li><a href="#services">Overnight Care</a></li>
+          <li><a href="#services">Cat Care</a></li>
+          <li><a href="#services">Small Animals</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Alix</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#booking">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-links footer-contact">
+        <h4>Contact</h4>
+        <p>📱 <a href="tel:8457518556">(845) 751-8556</a></p>
+        <p>📧 <a href="mailto:pawsandpetsplayclub1@gmail.com">Email Us</a></p>
+        <p>📍 Washingtonville, NY</p>
+        <p>📸 <a href="https://instagram.com/pawsandpetsplayclub" target="_blank" rel="noopener noreferrer">@pawsandpetsplayclub</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Paws and Pets Play Club. Made with 🐾 for pets and their people.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.getElementById('mobileNav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      mobileMenuBtn.textContent = mobileNav.classList.contains('active') ? '✕' : '☰';
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        mobileMenuBtn.textContent = '☰';
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Form handling - opens email client with pre-filled info
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const service = document.getElementById('service').value;
+      const petType = document.getElementById('petType').value;
+      const message = document.getElementById('message').value;
+      
+      const subject = encodeURIComponent(`New Pet Care Inquiry from ${name}`);
+      const body = encodeURIComponent(
+        `Hi Alix!\n\n` +
+        `I'm interested in your pet care services.\n\n` +
+        `Name: ${name}\n` +
+        `Phone: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Service Needed: ${service}\n` +
+        `Pet Type: ${petType}\n\n` +
+        `About my pet:\n${message}\n\n` +
+        `Looking forward to hearing from you!`
+      );
+      
+      window.location.href = `mailto:pawsandpetsplayclub1@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Show success message
+      document.getElementById('formSuccess').classList.add('show');
+      
+      // Reset form
+      this.reset();
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        document.getElementById('formSuccess').classList.remove('show');
+      }, 5000);
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.service-card, .policy-card, .area-card, .gallery-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
