@@ -1015,8 +1015,10 @@ section { position: relative; }
   font-size: clamp(17px, 1.5vw, 19.5px);
   line-height: 1.7;
   color: var(--ink-2);
+  text-align: justify;
+  hyphens: auto;
 }
-.about-prose p { margin-top: 24px; }
+.about-prose p { margin-top: 24px; text-align: justify; hyphens: auto; }
 .about-prose p:first-child { margin-top: 0; }
 .about-prose p:first-child::first-letter {
   font-family: var(--serif);
@@ -1273,6 +1275,8 @@ section { position: relative; }
   font-size: 19px;
   line-height: 1.45;
   color: var(--bone);
+  text-align: justify;
+  hyphens: auto;
 }
 .quote footer {
   font-family: var(--sans);
@@ -1564,6 +1568,8 @@ section { position: relative; }
   color: rgba(251, 249, 244, 0.72);
   max-width: 38ch;
   line-height: 1.55;
+  text-align: justify;
+  hyphens: auto;
 }
 .footer h4 {
   font-family: var(--sans);
