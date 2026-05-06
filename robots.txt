@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paws-and-pets-play-club.vercel.app/sitemap.xml
